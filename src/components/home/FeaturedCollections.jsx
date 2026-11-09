@@ -3,12 +3,12 @@ import { Image } from "@/components/ui/image";
 import Reveal from "@/components/common/Reveal";
 
 const CATEGORY_IMAGES = {
-  French: "https://media.base44.com/images/public/6af1d8f76e2d976f54fb7b7c/b3ffbff0b_generated_92ecf28b.png",
-  Minimalist: "https://media.base44.com/images/public/6af1d8f76e2d976f54fb7b7c/f84803f26_generated_6fc6432b.png",
-  Elegant: "https://media.base44.com/images/public/6af1d8f76e2d976f54fb7b7c/5bda943c7_generated_e99cd80a.png",
-  Glam: "https://media.base44.com/images/public/6af1d8f76e2d976f54fb7b7c/5c4429d02_generated_66e6d247.png",
-  Everyday: "https://media.base44.com/images/public/6af1d8f76e2d976f54fb7b7c/163ee365f_generated_8e316744.png",
-  Custom: "https://media.base44.com/images/public/6af1d8f76e2d976f54fb7b7c/b16921e2a_generated_fa46c818.png",
+  French: "/assets/products/blue-lemon-set.jpg",
+  Minimalist: "/assets/products/pop-girls-set.jpg",
+  Elegant: "/assets/products/anime-star-set.jpg",
+  Glam: "/assets/products/gem-stiletto-set.jpg",
+  Everyday: "/assets/products/bee-rabbit-set.jpg",
+  Custom: "/assets/products/other-one-set.jpg",
 };
 
 export default function FeaturedCollections({ categories }) {
