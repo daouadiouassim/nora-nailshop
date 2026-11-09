@@ -54,7 +54,7 @@ export default function About() {
           <Reveal delay={100} className="relative">
             <div className="aspect-[4/5] w-full overflow-hidden bg-brand-lavender/25">
               <Image
-                src="https://media.base44.com/images/public/6af1d8f76e2d976f54fb7b7c/030d64c19_generated_80920241.png"
+                src="/assets/products/hero-custom-set.jpg"
                 alt="Hand wearing royal blue press-on nails with gold accents on cream silk"
                 className="h-full w-full"
                 fittingType="fill"

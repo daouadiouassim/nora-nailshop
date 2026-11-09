@@ -5,7 +5,7 @@ import Reveal from "@/components/common/Reveal";
 export default function HeroSection({ settings }) {
   const heroImage =
     settings?.hero_image ||
-    "https://media.base44.com/images/public/6af1d8f76e2d976f54fb7b7c/030d64c19_generated_80920241.png";
+    "/assets/products/hero-custom-set.jpg";
 
   return (
     <section className="relative overflow-hidden bg-brand-cream">

@@ -18,7 +18,7 @@ export default function CustomPromo() {
           <div className="relative">
             <div className="aspect-[4/3] w-full overflow-hidden bg-brand-cream">
               <Image
-                src="https://media.base44.com/images/public/6af1d8f76e2d976f54fb7b7c/9e50a92b3_generated_7a98c2c4.png"
+                src="/assets/products/horror-eye-set.jpg"
                 alt="Cream nail tip shapes arranged on royal blue velvet with a gold chain"
                 className="h-full w-full"
                 fittingType="fill"

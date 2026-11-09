@@ -9,10 +9,10 @@ export default function SocialSection({ settings }) {
   const username = settings?.instagram_username || "@nora_nailshop";
 
   const tiles = [
-    "https://media.base44.com/images/public/6af1d8f76e2d976f54fb7b7c/5bda943c7_generated_e99cd80a.png",
-    "https://media.base44.com/images/public/6af1d8f76e2d976f54fb7b7c/5c4429d02_generated_66e6d247.png",
-    "https://media.base44.com/images/public/6af1d8f76e2d976f54fb7b7c/b16921e2a_generated_fa46c818.png",
-    "https://media.base44.com/images/public/6af1d8f76e2d976f54fb7b7c/b3ffbff0b_generated_92ecf28b.png",
+    "/assets/products/anime-star-set.jpg",
+    "/assets/products/gem-stiletto-set.jpg",
+    "/assets/products/other-one-set.jpg",
+    "/assets/products/blue-lemon-set.jpg",
   ];
 
   return (
