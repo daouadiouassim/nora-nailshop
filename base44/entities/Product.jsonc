@@ -1,0 +1,89 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Product name shown in the store"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL slug, e.g. milky-french"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short product description"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price in Algerian dinars (DA)"
+    },
+    "category": {
+      "type": "string",
+      "description": "Collection name, e.g. French"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Product image URLs"
+    },
+    "shapes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Available nail shapes"
+    },
+    "sizes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Available sizes"
+    },
+    "customization_enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether customers may add custom requests"
+    },
+    "is_available": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the set can be ordered"
+    },
+    "is_sample": {
+      "type": "boolean",
+      "default": false,
+      "description": "Sample content to replace or delete"
+    },
+    "sort_order": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "name",
+    "slug",
+    "price"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

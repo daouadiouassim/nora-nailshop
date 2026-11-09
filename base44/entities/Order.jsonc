@@ -1,0 +1,141 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "order_reference": {
+      "type": "string",
+      "description": "Human readable reference, e.g. NORA-20261109-4821"
+    },
+    "submission_id": {
+      "type": "string",
+      "description": "Idempotency key preventing duplicate submissions"
+    },
+    "customer_name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Normalised Algerian phone number"
+    },
+    "wilaya_code": {
+      "type": "string"
+    },
+    "wilaya_name": {
+      "type": "string"
+    },
+    "commune": {
+      "type": "string"
+    },
+    "delivery_address": {
+      "type": "string"
+    },
+    "delivery_instructions": {
+      "type": "string"
+    },
+    "items": {
+      "type": "array",
+      "description": "Snapshot of each ordered item at the time of ordering",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string"
+          },
+          "product_name": {
+            "type": "string"
+          },
+          "product_slug": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "unit_price": {
+            "type": "number"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "shape": {
+            "type": "string"
+          },
+          "size": {
+            "type": "string"
+          },
+          "size_note": {
+            "type": "string"
+          },
+          "customization": {
+            "type": "string"
+          },
+          "line_total": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "subtotal": {
+      "type": "number"
+    },
+    "delivery_fee": {
+      "type": "number",
+      "description": "Null until delivery pricing is configured"
+    },
+    "total": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "New Order",
+        "Pending Confirmation",
+        "Confirmed",
+        "Preparing",
+        "Shipped",
+        "Delivered",
+        "Cancelled"
+      ],
+      "enumColors": [
+        "blue",
+        "yellow",
+        "green",
+        "purple",
+        "blue",
+        "green",
+        "red"
+      ],
+      "default": "New Order"
+    },
+    "internal_notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "order_reference",
+    "customer_name",
+    "phone",
+    "items"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "StoreSettings",
+  "type": "object",
+  "properties": {
+    "announcement_text": {
+      "type": "string",
+      "default": "Orders are open \u2726 Delivery available to all 69 wilayas"
+    },
+    "instagram_url": {
+      "type": "string",
+      "default": "https://www.instagram.com/nora_nailshop/"
+    },
+    "tiktok_url": {
+      "type": "string",
+      "default": "https://www.tiktok.com/@nora_nailshop"
+    },
+    "instagram_username": {
+      "type": "string",
+      "default": "@nora_nailshop"
+    },
+    "instagram_followers": {
+      "type": "number",
+      "default": 7421
+    },
+    "instagram_posts": {
+      "type": "number",
+      "default": 283
+    },
+    "hero_image": {
+      "type": "string"
+    },
+    "about_text": {
+      "type": "string"
+    },
+    "default_delivery_fee": {
+      "type": "number",
+      "description": "Fallback delivery fee in DA when a wilaya has none"
+    },
+    "free_delivery_threshold": {
+      "type": "number",
+      "description": "Optional subtotal above which delivery is free"
+    },
+    "delivery_note": {
+      "type": "string"
+    }
+  },
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

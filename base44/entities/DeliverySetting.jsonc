@@ -1,0 +1,42 @@
+{
+  "name": "DeliverySetting",
+  "type": "object",
+  "properties": {
+    "wilaya_code": {
+      "type": "string"
+    },
+    "wilaya_name": {
+      "type": "string"
+    },
+    "delivery_fee": {
+      "type": "number",
+      "description": "Fee in DA. Leave empty until confirmed with the courier"
+    },
+    "is_available": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "wilaya_code",
+    "wilaya_name"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
